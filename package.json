@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:server": "jest server",
+    "test:client": "cd client && yarn test",
+    "start:server": "cd server && node server.js",
+    "start:client": "cd client && yarn start",
+    "start": "concurrently \"yarn start:server\" \"yarn start:client\""
+  },
+  "author": "Hamza Shahid",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "24.9.0"
+  }
+}
