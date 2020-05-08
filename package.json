@@ -8,6 +8,7 @@
     "test:client": "cd client && yarn test",
     "start:server": "cd server && node server.js",
     "start:client": "cd client && yarn start",
+    "build:client": "cd client && yarn build",
     "start": "concurrently \"yarn start:server\" \"yarn start:client\""
   },
   "author": "Hamza Shahid",

@@ -3,6 +3,10 @@ const fetch = require('node-fetch');
 const { WEATHER_API_KEY } = process.env;
 
 const getWeather = async ({ country, city }) => {
+    if(!WEATHER_API_KEY) {
+        throw Error('Missing weather-service API Key, see Setup in README');
+    }
+
     const url = new URL('https://api.openweathermap.org/data/2.5/weather')
     url.searchParams.append('APPID', WEATHER_API_KEY);
     url.searchParams.append('q', `${city},${country}`);
